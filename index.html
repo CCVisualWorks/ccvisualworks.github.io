@@ -1,14 +1,15 @@
-https://github.com/CCVisualWorks/ccvisualworks.github.io/blob/main/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CC VISUAL WORKS | AI Creative Studio</title>
-  <meta name="description" content="CC Visual Works — Creative video, AI visuals, storytelling and digital content production.">
+  <title>CC Visual Works | AI Video & E-commerce Content</title>
+
+  <meta name="description" content="CC Visual Works creates AI videos, e-commerce content, video editing and creative visual content for brands and online businesses.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -21,9 +22,9 @@ https://github.com/CCVisualWorks/ccvisualworks.github.io/blob/main/index.html
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-    background: #151A24;
-color: #1f2937;
-line-height: 1.6;
+      background: #f5f7f2;
+      color: #202520;
+      line-height: 1.6;
     }
 
     a {
@@ -39,40 +40,41 @@ line-height: 1.6;
       left: 0;
       width: 100%;
       z-index: 1000;
-      padding: 20px 6%;
+      padding: 20px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(5, 5, 5, 0.75);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(245, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #dfe5dc;
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: 2px;
     }
 
     .logo span {
-      color: #999;
+      color: #5f7f63;
     }
 
     .nav-links {
       display: flex;
-      gap: 30px;
+      gap: 28px;
       list-style: none;
     }
 
     .nav-links a {
       font-size: 14px;
-      color: #bbb;
+      color: #4d554d;
       transition: 0.3s;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #527158;
     }
+
 
     /* HERO */
 
@@ -80,48 +82,57 @@ line-height: 1.6;
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 140px 8% 80px;
+      padding: 150px 8% 100px;
       position: relative;
       overflow: hidden;
+
       background:
-        radial-gradient(circle at 75% 30%, rgba(120,120,255,0.15), transparent 30%),
-        radial-gradient(circle at 20% 70%, rgba(255,255,255,0.06), transparent 30%),
-       #151A24;
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(111, 145, 112, 0.16),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(180, 195, 175, 0.18),
+          transparent 30%
+        ),
+        #f5f7f2;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 850px;
       position: relative;
       z-index: 2;
     }
 
     .tag {
       display: inline-block;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid #b8c7b8;
       padding: 8px 16px;
       border-radius: 50px;
-      color: #bbb;
+      color: #5f735f;
       font-size: 12px;
       letter-spacing: 2px;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(55px, 9vw, 125px);
+      font-size: clamp(55px, 9vw, 120px);
       line-height: 0.9;
       letter-spacing: -5px;
       margin-bottom: 35px;
     }
 
     .hero h1 span {
-      color: #888;
+      color: #5f8063;
     }
 
     .hero p {
       max-width: 650px;
       font-size: 19px;
-      color: #aaa;
+      color: #626a62;
       margin-bottom: 40px;
     }
 
@@ -132,40 +143,43 @@ line-height: 1.6;
     }
 
     .btn {
-      padding: 15px 25px;
-      border-radius: 5px;
+      padding: 14px 24px;
+      border-radius: 6px;
       font-size: 14px;
       font-weight: bold;
       transition: 0.3s;
-      border: 1px solid #333;
+      border: 1px solid #5f8063;
     }
 
     .btn-primary {
-      background: white;
-      color: black;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: #ddd;
-    }
-
-    .btn-secondary {
+      background: #5f8063;
       color: white;
     }
 
-    .btn-secondary:hover {
-      background: #151515;
+    .btn-primary:hover {
+      background: #49664e;
+      transform: translateY(-3px);
     }
 
-    /* SECTIONS */
+    .btn-secondary {
+      color: #4f674f;
+      background: transparent;
+    }
 
-    section {
+    .btn-secondary:hover {
+      background: #e6ede4;
+    }
+
+
+    /* SELECTED VIDEOS */
+
+    .videos {
       padding: 110px 8%;
+      background: #ffffff;
     }
 
     .section-label {
-      color: #777;
+      color: #668066;
       text-transform: uppercase;
       letter-spacing: 3px;
       font-size: 12px;
@@ -175,186 +189,114 @@ line-height: 1.6;
     .section-title {
       font-size: clamp(35px, 5vw, 65px);
       line-height: 1;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
       letter-spacing: -2px;
     }
 
-    /* SERVICES */
-
-    .services {
-      background: #090909;
+    .video-intro {
+      max-width: 600px;
+      color: #707770;
+      margin-bottom: 40px;
     }
 
-    .service-grid {
+    .video-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: #e5e7eb;
-    }
-
-    .service {
-      background: #090909;
-      padding: 45px 35px;
-      min-height: 280px;
-      transition: 0.3s;
-    }
-
-    .service:hover {
-      background: #eff6ff;
-    }
-
-    .service-number {
-      color: #555;
-      font-size: 13px;
-      margin-bottom: 50px;
-    }
-
-    .service h3 {
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-
-    .service p {
-      color: #888;
-      font-size: 15px;
-    }
-
-    /* WORK */
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .work-card {
-  height: 400px;
-  background: linear-gradient(145deg, #202735, #111722);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 18px;
-  display: flex;
-  align-items: flex-end;
-  padding: 35px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.35s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255,255,255,0.25);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-}
-
- .work-card::before {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: rgba(80, 140, 255, 0.08);
-  top: -100px;
-  right: -80px;
-  transition: 0.5s ease;
-  filter: blur(10px);
-}
-
-.work-card:hover::before {
-  transform: scale(1.4);
-}
-
-.work-info {
-  position: relative;
-  z-index: 2;
-}
-
-.work-info small {
-  color: #9aa9bd;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  font-weight: bold;
-}
-
-.work-info h3 {
-  color: #ffffff;
-  font-size: 32px;
-  margin-top: 8px;
-  letter-spacing: -1px;
-  line-height: 1.1;
-}
-
-    /* ABOUT */
-
-    .about {
-      background: #0b0b0b;
+    .video-card {
+      min-height: 300px;
+      background: #e9eee7;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #718071;
+      border: 1px solid #dce4da;
     }
 
-    .about-grid {
+    .video-card span {
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+
+    /* SIMPLE INTRO */
+
+    .intro {
+      padding: 110px 8%;
+      background: #202720;
+      color: white;
+    }
+
+    .intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 70px;
       align-items: center;
     }
 
-    .about-text {
-      color: #999;
+    .intro-highlight {
+      font-size: clamp(40px, 6vw, 75px);
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .intro-text {
+      color: #c5cdc5;
       font-size: 18px;
     }
 
-    .about-text p {
+    .intro-text p {
       margin-bottom: 20px;
     }
 
-    .about-highlight {
-      font-size: 55px;
-      font-weight: bold;
-      line-height: 1;
-    }
 
     /* CONTACT */
 
     .contact {
+      padding: 120px 8%;
       text-align: center;
-      min-height: 70vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background:
-        radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 35%),
-        #ffffff;
+      background: #f5f7f2;
     }
 
     .contact h2 {
-      font-size: clamp(50px, 9vw, 110px);
+      font-size: clamp(50px, 9vw, 100px);
       line-height: 0.9;
       letter-spacing: -4px;
       margin-bottom: 30px;
     }
 
     .contact p {
-      color: #888;
+      color: #707770;
       max-width: 550px;
-      margin-bottom: 35px;
+      margin: 0 auto 35px;
     }
 
     .email {
+      display: inline-block;
       font-size: 20px;
-      border-bottom: 1px solid #555;
+      color: #527158;
+      border-bottom: 1px solid #78927b;
       padding-bottom: 5px;
     }
+
 
     /* FOOTER */
 
     footer {
       padding: 30px 8%;
-      border-top: 1px solid #1c1c1c;
+      border-top: 1px solid #dfe5dc;
       display: flex;
       justify-content: space-between;
-      color: #666;
+      color: #727a72;
       font-size: 12px;
+      background: #ffffff;
     }
+
 
     /* MOBILE */
 
@@ -369,35 +311,33 @@ line-height: 1.6;
       }
 
       .hero {
-        padding: 130px 6% 70px;
+        padding: 130px 6% 80px;
       }
 
       .hero h1 {
         letter-spacing: -3px;
       }
 
-      section {
+      .videos,
+      .intro,
+      .contact {
         padding: 80px 6%;
       }
 
-      .service-grid {
+      .video-grid {
         grid-template-columns: 1fr;
       }
 
-      .work-grid {
-        grid-template-columns: 1fr;
+      .video-card {
+        min-height: 250px;
       }
 
-      .work-card {
-        height: 300px;
-      }
-
-      .about-grid {
+      .intro-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
 
-      .about-highlight {
+      .intro-highlight {
         font-size: 45px;
       }
 
@@ -405,58 +345,65 @@ line-height: 1.6;
         flex-direction: column;
         gap: 10px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
+
 
   <!-- NAVIGATION -->
 
   <nav>
+
     <div class="logo">
       CC <span>VISUAL WORKS</span>
     </div>
 
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
+
   </nav>
 
 
   <!-- HERO -->
 
-  <section class="hero" id="home">
+  <section class="hero">
 
     <div class="hero-content">
 
       <div class="tag">
-        Creative • AI • Visual Storytelling
+        AI • Video • E-commerce • Creative
       </div>
 
       <h1>
-        WE CREATE<br>
+        I CREATE<br>
         <span>VISUALS.</span>
       </h1>
 
       <p>
-        CC Visual Works is a creative studio focused on AI-powered
-        video production, visual storytelling, digital content and
-        creative experiences.
+        I create AI-powered videos, e-commerce content,
+        video edits and creative visuals for brands and
+        online businesses.
       </p>
 
       <div class="buttons">
-        <a href="#work" class="btn btn-primary">
-          View Our Work
+
+        <a href="services.html" class="btn btn-primary">
+          View Services
         </a>
 
-        <a href="#contact" class="btn btn-secondary">
+        <a href="contact.html" class="btn btn-secondary">
           Start a Project →
         </a>
+
       </div>
 
     </div>
@@ -464,72 +411,36 @@ line-height: 1.6;
   </section>
 
 
-  <!-- SERVICES -->
+  <!-- SELECTED VIDEOS -->
 
-  <section class="services" id="services">
+  <section class="videos">
 
     <div class="section-label">
-      What We Do
+      Selected Videos
     </div>
 
     <h2 class="section-title">
-      Ideas into<br>visual experiences.
+      A few things<br>
+      I've created.
     </h2>
 
-    <div class="service-grid">
+    <p class="video-intro">
+      A small selection of my AI video, product and creative work.
+      I prefer to show a few strong examples rather than everything.
+    </p>
 
-      <div class="service">
-        <div class="service-number">01</div>
-        <h3>AI Video</h3>
-        <p>
-          AI-powered video production, cinematic storytelling,
-          character animation and social media content.
-        </p>
+    <div class="video-grid">
+
+      <div class="video-card">
+        <span>Video 01</span>
       </div>
 
-      <div class="service">
-        <div class="service-number">02</div>
-        <h3>Creative Content</h3>
-        <p>
-          Creative concepts, advertisements, promotional videos
-          and digital campaigns designed to capture attention.
-        </p>
+      <div class="video-card">
+        <span>Video 02</span>
       </div>
 
-      <div class="service">
-        <div class="service-number">03</div>
-        <h3>Visual Design</h3>
-        <p>
-          Creative visuals, AI characters, product imagery,
-          branding content and digital experiences.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">04</div>
-        <h3>Storytelling</h3>
-        <p>
-          From a simple idea to a complete story, we create
-          engaging visual narratives for brands and creators.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">05</div>
-        <h3>Social Media</h3>
-        <p>
-          Short-form videos, reels, TikTok content and
-          attention-grabbing social campaigns.
-        </p>
-      </div>
-
-      <div class="service">
-        <div class="service-number">06</div>
-        <h3>Custom Projects</h3>
-        <p>
-          Have something different in mind? Let's turn your
-          concept into something visual and memorable.
-        </p>
+      <div class="video-card">
+        <span>Video 03</span>
       </div>
 
     </div>
@@ -537,107 +448,45 @@ line-height: 1.6;
   </section>
 
 
-  <!-- WORK -->
+  <!-- INTRO -->
 
-  <section id="work">
+  <section class="intro">
 
-    <div class="section-label">
-      Selected Work
-    </div>
+    <div class="intro-grid">
 
-    <h2 class="section-title">
-      Built to<br>stand out.
-    </h2>
-
-    <div class="work-grid">
-
-      <div class="work-card">
-        <div class="work-info">
-          <small>AI Production</small>
-          <h3>AI Characters</h3>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-info">
-          <small>Commercial</small>
-          <h3>Brand Stories</h3>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-info">
-          <small>Social Content</small>
-          <h3>Short Form</h3>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-info">
-          <small>Creative Studio</small>
-          <h3>Visual Concepts</h3>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
- <!-- ABOUT -->
-
-<section class="about" id="about">
-
-  <div class="about-grid">
-
-    <div>
-      <div class="section-label">
-        About CC Visual Works
-      </div>
-
-      <div class="about-highlight">
+      <div class="intro-highlight">
         Creativity<br>
         meets<br>
         technology.
       </div>
-    </div>
 
-    <div class="about-text">
+      <div class="intro-text">
 
-      <p>
-        CC Visual Works is an independent creative studio combining
-        AI, visual content, video editing and e-commerce experience.
-      </p>
+        <p>
+          CC Visual Works is an independent creative business.
+        </p>
 
-      <p>
-        I create visual content for brands, products and online
-        businesses, from AI-powered videos and product visuals
-        to social media content.
-      </p>
+        <p>
+          I combine creative thinking, AI tools, video editing
+          and e-commerce experience to create useful and engaging
+          visual content.
+        </p>
 
-      <p>
-        With experience in e-commerce management, I understand that
-        good content is not only about looking great — it should also
-        help products get noticed and connect with customers.
-      </p>
+        <p>
+          From a product idea to a finished video,
+          I keep the process simple and personal.
+        </p>
 
-      <p>
-        I believe great content starts with a great idea.
-        My goal is to turn that idea into something people can see,
-        understand and remember.
-      </p>
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
 
   <!-- CONTACT -->
 
-  <section class="contact" id="contact">
+  <section class="contact">
 
     <div class="section-label">
       Let's Create Something
@@ -649,9 +498,8 @@ line-height: 1.6;
     </h2>
 
     <p>
-      Tell us what you're imagining.
-      Let's turn your idea into something people can see,
-      feel and remember.
+      Tell me what you're imagining.
+      Let's turn your idea into something visual.
     </p>
 
     <a class="email" href="mailto:hello@ccvisualworks.com">
@@ -670,7 +518,7 @@ line-height: 1.6;
     </div>
 
     <div>
-      Creative • AI • Visual Storytelling
+      AI • Video • E-commerce • Creative
     </div>
 
   </footer>
@@ -678,4 +526,3 @@ line-height: 1.6;
 
 </body>
 </html>
-
