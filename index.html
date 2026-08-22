@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CC VISUAL WORKS | AI Creative Studio</title>
-  <meta name="description" content="CC Visual Works — AI video, visual content, video editing and e-commerce creative work.">
+  <title>CC VISUAL WORKS | Creative Digital Services</title>
+  <meta name="description" content="CC Visual Works — video, audio and content editing, website design, visual design, e-commerce support, YouTube subtitling and AI-assisted creative design.">
 
   <style>
     * {
@@ -16,6 +16,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -38,19 +39,20 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      padding: 24px 4.5%;
+      padding: 20px 4.5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(7, 24, 18, 0.92);
+      background: rgba(7, 24, 18, 0.94);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
+      white-space: nowrap;
     }
 
     .logo strong {
@@ -63,18 +65,30 @@
 
     .nav-links {
       display: flex;
-      gap: 42px;
+      gap: 25px;
+      align-items: center;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 16px;
+      font-size: 14px;
       color: #E6ECE8;
       transition: 0.3s;
     }
 
     .nav-links a:hover {
       color: #4A9BFF;
+    }
+
+    .quote-nav {
+      padding: 10px 18px;
+      border: 1px solid #2F80FF;
+      border-radius: 4px;
+      color: #FFFFFF !important;
+    }
+
+    .quote-nav:hover {
+      background: #2F80FF;
     }
 
     /* HERO */
@@ -137,7 +151,7 @@
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 680px;
       font-size: 19px;
       color: #E6ECE8;
       margin-bottom: 42px;
@@ -155,12 +169,13 @@
     }
 
     .btn {
-      padding: 18px 40px;
+      padding: 18px 32px;
       border-radius: 5px;
       font-size: 14px;
       font-weight: bold;
       transition: 0.3s;
       border: 1px solid #2F80FF;
+      display: inline-block;
     }
 
     .btn-primary {
@@ -183,7 +198,7 @@
       background: rgba(47, 128, 255, 0.10);
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     section {
       padding: 110px 4.6%;
@@ -220,8 +235,8 @@
 
     .service {
       background: #0B2118;
-      padding: 45px 35px;
-      min-height: 280px;
+      padding: 38px 32px;
+      min-height: 285px;
       transition: 0.3s;
     }
 
@@ -232,11 +247,11 @@
     .service-number {
       color: #6F8579;
       font-size: 13px;
-      margin-bottom: 50px;
+      margin-bottom: 35px;
     }
 
     .service h3 {
-      font-size: 25px;
+      font-size: 23px;
       margin-bottom: 15px;
       color: #FFFFFF;
     }
@@ -262,6 +277,7 @@
     .about-text {
       color: #E6ECE8;
       font-size: 18px;
+      max-width: 650px;
     }
 
     .about-text p {
@@ -269,10 +285,185 @@
     }
 
     .about-highlight {
-      font-size: 55px;
+      font-size: clamp(45px, 5vw, 65px);
       font-weight: bold;
       line-height: 1;
       color: #FFFFFF;
+    }
+
+    .about-highlight span {
+      color: #2F80FF;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio {
+      background: #0B2118;
+    }
+
+    .portfolio-intro {
+      max-width: 700px;
+      color: #C4D0CA;
+      font-size: 17px;
+      margin-top: -35px;
+      margin-bottom: 50px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      min-height: 260px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #071812;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      transition: 0.3s;
+      overflow: hidden;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(47,128,255,0.5);
+    }
+
+    .portfolio-item h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-item p {
+      color: #8FA59A;
+      font-size: 14px;
+    }
+
+    .portfolio-note {
+      margin-top: 35px;
+      color: #8FA59A;
+      font-size: 14px;
+    }
+
+    /* PARTNER */
+
+    .partner {
+      background: #071812;
+    }
+
+    .partner-box {
+      max-width: 850px;
+      padding: 60px;
+      border: 1px solid rgba(74,155,255,0.25);
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(47,128,255,0.14),
+          transparent 35%
+        ),
+        #0B2118;
+    }
+
+    .partner-box h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .partner-box p {
+      color: #C4D0CA;
+      font-size: 17px;
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .partner-list {
+      color: #E6ECE8;
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+
+    .partner-list li {
+      margin-bottom: 8px;
+    }
+
+    /* QUOTE */
+
+    .quote {
+      background: #0B2118;
+    }
+
+    .quote-intro {
+      max-width: 650px;
+      color: #C4D0CA;
+      margin-top: -35px;
+      margin-bottom: 45px;
+      font-size: 17px;
+    }
+
+    .quote-form {
+      max-width: 850px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #C4D0CA;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #071812;
+      color: #FFFFFF;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #2F80FF;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group select option {
+      background: #071812;
+      color: #FFFFFF;
+    }
+
+    .quote-form .btn {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .quote-whatsapp {
+      margin-top: 30px;
+      color: #C4D0CA;
     }
 
     /* CONTACT */
@@ -305,14 +496,42 @@
     .contact p {
       color: #C4D0CA;
       max-width: 550px;
-      margin-bottom: 42px;
+      margin-bottom: 35px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .email {
-      font-size: 20px;
+      font-size: 18px;
       color: #4A9BFF;
       border-bottom: 1px solid #2F80FF;
       padding-bottom: 5px;
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+
+    .whatsapp {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      z-index: 1100;
+      padding: 15px 20px;
+      border-radius: 50px;
+      background: #25D366;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-4px);
     }
 
     /* FOOTER */
@@ -328,6 +547,25 @@
     }
 
     /* MOBILE */
+
+    @media (max-width: 1000px) {
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     @media (max-width: 800px) {
 
@@ -355,7 +593,8 @@
         padding: 80px 6%;
       }
 
-      .service-grid {
+      .service-grid,
+      .portfolio-grid {
         grid-template-columns: 1fr;
       }
 
@@ -366,6 +605,28 @@
 
       .about-highlight {
         font-size: 45px;
+      }
+
+      .partner-box {
+        padding: 35px 25px;
+      }
+
+      .partner-box h3 {
+        font-size: 30px;
+      }
+
+      .quote-form {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 17px;
       }
 
       footer {
@@ -388,8 +649,11 @@
 
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#partner">Partner</a></li>
+      <li><a href="#quote" class="quote-nav">Get a Quote</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -403,7 +667,7 @@
     <div class="hero-content">
 
       <div class="tag">
-        AI • VISUAL • VIDEO • E-COMMERCE
+        CREATIVE • DIGITAL • AI
       </div>
 
       <h1>
@@ -412,19 +676,19 @@
       </h1>
 
       <p>
-        I create AI-powered videos, visual content,
-        video editing and <span class="blue-text">e-commerce content</span>
-        for brands and online businesses.
+        Independent creative services for individuals and small businesses —
+        from <span class="blue-text">video, audio and content editing</span>
+        to websites, visual design, e-commerce support and AI-assisted creative work.
       </p>
 
       <div class="buttons">
 
-        <a href="#services" class="btn btn-primary">
-          Explore My Services
+        <a href="#portfolio" class="btn btn-primary">
+          View Portfolio
         </a>
 
-        <a href="#contact" class="btn btn-secondary">
-          Start a Project →
+        <a href="#quote" class="btn btn-secondary">
+          Get a Quote →
         </a>
 
       </div>
@@ -436,59 +700,78 @@
 
   <!-- SERVICES -->
 
-  <!-- SERVICES -->
+  <section class="services" id="services">
 
-<section class="services" id="services">
-
-  <div class="section-label">
-    What I Do
-  </div>
-
-  <h2 class="section-title">
-    Ideas into<br>
-    visual experiences.
-  </h2>
-
-  <div class="service-grid">
-
-    <div class="service">
-      <div class="service-number">01</div>
-
-      <h3>AI Video</h3>
-
-      <p>
-        AI-powered video production, cinematic storytelling,
-        character animation and short-form content.
-      </p>
+    <div class="section-label">
+      What I Do
     </div>
 
+    <h2 class="section-title">
+      Simple work.<br>
+      Creative ideas.
+    </h2>
 
-    <div class="service">
-      <div class="service-number">02</div>
+    <div class="service-grid">
 
-      <h3>Creative Content</h3>
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>Video, Audio & Content Editing</h3>
+        <p>
+          Simple editing using images, text, transitions, basic effects
+          and audio for social media, promotional content and online use.
+        </p>
+      </div>
 
-      <p>
-        Creative concepts, advertisements, promotional visuals
-        and digital content designed to capture attention.
-      </p>
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>Website Design</h3>
+        <p>
+          Simple, modern and responsive websites for small businesses,
+          individuals and personal brands.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>Visual Design</h3>
+        <p>
+          Creative visuals for social media, promotions, products
+          and digital content.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">04</div>
+        <h3>E-commerce Support</h3>
+        <p>
+          Practical support for online stores, including product listings,
+          content updates and promotional visuals.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">05</div>
+        <h3>YouTube Subtitling</h3>
+        <p>
+          Simple subtitle support for YouTube and video content,
+          including English or Bahasa Melayu subtitles, basic timing
+          and SRT files.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">06</div>
+        <h3>AI-Assisted Creative Design</h3>
+        <p>
+          Creative visuals developed with AI-assisted tools
+          and refined using Photoshop.
+        </p>
+      </div>
+
     </div>
 
+  </section>
 
-    <div class="service">
-      <div class="service-number">03</div>
-
-      <h3>Social Media</h3>
-
-      <p>
-        Short-form videos, reels, TikTok content
-        and attention-grabbing social media visuals.
-      </p>
-    </div>
-
-  </div>
-
-</section>
 
   <!-- ABOUT -->
 
@@ -503,35 +786,255 @@
         </div>
 
         <div class="about-highlight">
-          Creativity<br>
-          meets<br>
-          technology.
+          Not a big<br>
+          agency.<br>
+          <span>Just one.</span>
         </div>
 
       </div>
 
-
       <div class="about-text">
 
         <p>
-          CC Visual Works is an independent creative practice
-          focused on AI, digital production and visual storytelling.
+          CC Visual Works is an independent creative service built by
+          a solo creator who enjoys learning, creating and exploring
+          new digital and AI tools.
         </p>
 
         <p>
-          I believe great content starts with a great idea.
-          My goal is to turn that idea into visuals that
-          people remember.
+          I provide practical creative services for individuals
+          and small businesses.
         </p>
 
         <p>
-          From AI-generated characters and cinematic videos
-          to social media and commercial content,
-          I create visual experiences built for today's digital world.
+          I believe in keeping things simple, personal and practical.
+          When you work with CC Visual Works, you work directly with me.
+        </p>
+
+        <p>
+          <strong>Still learning. Still creating. Still moving forward.</strong>
         </p>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- PORTFOLIO -->
+
+  <section class="portfolio" id="portfolio">
+
+    <div class="section-label">
+      Portfolio
+    </div>
+
+    <h2 class="section-title">
+      A few things<br>
+      I've created.
+    </h2>
+
+    <p class="portfolio-intro">
+      A collection of creative work, experiments and projects created
+      with AI, Photoshop and other digital tools.
+    </p>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 01</h3>
+          <p>AI-assisted visual concept</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 02</h3>
+          <p>AI + Photoshop visual</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 03</h3>
+          <p>Promotional visual</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 04</h3>
+          <p>Simple content editing</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 05</h3>
+          <p>Creative image concept</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div>
+          <h3>Creative Project 06</h3>
+          <p>Digital creative experiment</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="portfolio-note">
+      More creative projects coming soon.
+    </div>
+
+  </section>
+
+
+  <!-- BE A PARTNER -->
+
+  <section class="partner" id="partner">
+
+    <div class="section-label">
+      Collaboration
+    </div>
+
+    <h2 class="section-title">
+      Be a Partner
+    </h2>
+
+    <div class="partner-box">
+
+      <h3>Looking for a creative partner?</h3>
+
+      <p>
+        Let's work together on a flexible, project-by-project basis.
+        Whether you need creative support for one project or ongoing help,
+        let's discuss what you need.
+      </p>
+
+      <ul class="partner-list">
+        <li>Video, audio & content editing</li>
+        <li>Website projects</li>
+        <li>Visual design</li>
+        <li>E-commerce support</li>
+        <li>YouTube subtitling</li>
+        <li>AI-assisted creative work</li>
+      </ul>
+
+      <a href="#quote" class="btn btn-primary">
+        Let's Work Together →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- GET A QUOTE -->
+
+  <section class="quote" id="quote">
+
+    <div class="section-label">
+      Get a Quote
+    </div>
+
+    <h2 class="section-title">
+      Tell me about<br>
+      your project.
+    </h2>
+
+    <p class="quote-intro">
+      Tell me a little about what you need. I'll review your requirements
+      and get back to you.
+    </p>
+
+    <form class="quote-form" action="mailto:ccvisualworks@gmail.com" method="post" enctype="text/plain">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="business">Business / Company</label>
+        <input type="text" id="business" name="Business">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp">
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service Needed</label>
+
+        <select id="service" name="Service">
+          <option value="">Please select</option>
+          <option>Video, Audio & Content Editing</option>
+          <option>Website Design</option>
+          <option>Visual Design</option>
+          <option>E-commerce Support</option>
+          <option>YouTube Subtitling</option>
+          <option>AI-Assisted Creative Design</option>
+          <option>Be a Partner</option>
+          <option>Other</option>
+        </select>
+
+      </div>
+
+      <div class="form-group">
+        <label for="budget">Estimated Budget</label>
+
+        <select id="budget" name="Budget">
+          <option value="">Please select</option>
+          <option>RM300 – RM500</option>
+          <option>RM500 – RM1,000</option>
+          <option>RM1,000 – RM2,000</option>
+          <option>Not sure yet</option>
+        </select>
+
+      </div>
+
+      <div class="form-group full">
+
+        <label for="message">Tell me about your project</label>
+
+        <textarea
+          id="message"
+          name="Project Details"
+          placeholder="Tell me what you would like to create..."
+          required
+        ></textarea>
+
+      </div>
+
+      <div class="form-group full">
+
+        <button type="submit" class="btn btn-primary">
+          Submit Quote Request →
+        </button>
+
+      </div>
+
+    </form>
+
+    <div class="quote-whatsapp">
+      Prefer WhatsApp?
+      <a
+        href="https://wa.me/60123456789?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+        class="blue-text"
+        target="_blank"
+      >
+        Message me directly.
+      </a>
     </div>
 
   </section>
@@ -552,13 +1055,28 @@
 
     <p>
       Tell me what you're imagining.
-      Let's turn your idea into something people can see,
-      feel and remember.
+      Let's turn your idea into something simple,
+      useful and creative.
     </p>
 
-    <a class="email" href="mailto:ccvisualworks@gmail.com">
-      ccvisualworks@gmail.com
-    </a>
+    <div class="contact-buttons">
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/60123456789?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank"
+      >
+        WhatsApp Me
+      </a>
+
+      <a
+        class="email"
+        href="mailto:ccvisualworks@gmail.com"
+      >
+        ccvisualworks@gmail.com
+      </a>
+
+    </div>
 
   </section>
 
@@ -572,10 +1090,22 @@
     </div>
 
     <div>
-      AI • Creative • Visual
+      Creative • Digital • AI
     </div>
 
   </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+
+  <a
+    href="https://wa.me/60123456789?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+    class="whatsapp"
+    target="_blank"
+    aria-label="Chat with CC Visual Works on WhatsApp"
+  >
+    WhatsApp
+  </a>
 
 </body>
 </html>
