@@ -246,90 +246,10 @@
       font-size: 15px;
     }
 
-    /* WORK */
-
-    .work {
-      background: #071812;
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .work-card {
-      height: 360px;
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          rgba(47, 128, 255, 0.18),
-          transparent 30%
-        ),
-        linear-gradient(
-          145deg,
-          #153328,
-          #0A1C15
-        );
-
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      display: flex;
-      align-items: flex-end;
-      padding: 35px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.35s ease;
-    }
-
-    .work-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(74,155,255,0.45);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-    }
-
-    .work-card::before {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: rgba(47,128,255,0.08);
-      top: -100px;
-      right: -80px;
-      transition: 0.5s ease;
-      filter: blur(10px);
-    }
-
-    .work-card:hover::before {
-      transform: scale(1.4);
-    }
-
-    .work-info {
-      position: relative;
-      z-index: 2;
-    }
-
-    .work-info small {
-      color: #8FA59A;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 11px;
-      font-weight: bold;
-    }
-
-    .work-info h3 {
-      color: #FFFFFF;
-      font-size: 32px;
-      margin-top: 8px;
-      letter-spacing: -1px;
-      line-height: 1.1;
-    }
-
     /* ABOUT */
 
     .about {
-      background: #0B2118;
+      background: #071812;
     }
 
     .about-grid {
@@ -371,7 +291,7 @@
           rgba(47,128,255,0.18),
           transparent 35%
         ),
-        #071812;
+        #0B2118;
     }
 
     .contact h2 {
@@ -439,14 +359,6 @@
         grid-template-columns: 1fr;
       }
 
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .work-card {
-        height: 300px;
-      }
-
       .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -477,7 +389,6 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -508,8 +419,8 @@
 
       <div class="buttons">
 
-        <a href="#work" class="btn btn-primary">
-          View My Work
+        <a href="#services" class="btn btn-primary">
+          Explore My Services
         </a>
 
         <a href="#contact" class="btn btn-secondary">
@@ -583,65 +494,6 @@
           Short-form videos, reels, TikTok content
           and attention-grabbing social media visuals.
         </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WORK -->
-
-  <section class="work" id="work">
-
-    <div class="section-label">
-      Selected Work
-    </div>
-
-    <h2 class="section-title">
-      A few things<br>
-      I've created.
-    </h2>
-
-    <div class="work-grid">
-
-      <div class="work-card">
-
-        <div class="work-info">
-          <small>AI Video</small>
-          <h3>Cinematic<br>Storytelling</h3>
-        </div>
-
-      </div>
-
-
-      <div class="work-card">
-
-        <div class="work-info">
-          <small>E-Commerce</small>
-          <h3>Product<br>Content</h3>
-        </div>
-
-      </div>
-
-
-      <div class="work-card">
-
-        <div class="work-info">
-          <small>Creative</small>
-          <h3>Visual<br>Content</h3>
-        </div>
-
-      </div>
-
-
-      <div class="work-card">
-
-        <div class="work-info">
-          <small>Social Media</small>
-          <h3>Short-Form<br>Content</h3>
-        </div>
-
       </div>
 
     </div>
