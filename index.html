@@ -461,11 +461,6 @@
       cursor: pointer;
     }
 
-    .quote-whatsapp {
-      margin-top: 30px;
-      color: #C4D0CA;
-    }
-
     /* CONTACT */
 
     .contact {
@@ -511,27 +506,6 @@
       color: #4A9BFF;
       border-bottom: 1px solid #2F80FF;
       padding-bottom: 5px;
-    }
-
-    /* WHATSAPP FLOATING BUTTON */
-
-    .whatsapp {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-      z-index: 1100;
-      padding: 15px 20px;
-      border-radius: 50px;
-      background: #25D366;
-      color: #FFFFFF;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .whatsapp:hover {
-      transform: translateY(-4px);
     }
 
     /* FOOTER */
@@ -623,12 +597,6 @@
         grid-column: auto;
       }
 
-      .whatsapp {
-        right: 15px;
-        bottom: 15px;
-        padding: 13px 17px;
-      }
-
       footer {
         flex-direction: column;
         gap: 10px;
@@ -715,43 +683,57 @@
 
       <div class="service">
         <div class="service-number">01</div>
+
         <h3>Video, Audio & Content Editing</h3>
+
         <p>
           Simple editing using images, text, transitions, basic effects
           and audio for social media, promotional content and online use.
         </p>
       </div>
 
+
       <div class="service">
         <div class="service-number">02</div>
+
         <h3>Website Design</h3>
+
         <p>
           Simple, modern and responsive websites for small businesses,
           individuals and personal brands.
         </p>
       </div>
 
+
       <div class="service">
         <div class="service-number">03</div>
+
         <h3>Visual Design</h3>
+
         <p>
           Creative visuals for social media, promotions, products
           and digital content.
         </p>
       </div>
 
+
       <div class="service">
         <div class="service-number">04</div>
+
         <h3>E-commerce Support</h3>
+
         <p>
           Practical support for online stores, including product listings,
           content updates and promotional visuals.
         </p>
       </div>
 
+
       <div class="service">
         <div class="service-number">05</div>
+
         <h3>YouTube Subtitling</h3>
+
         <p>
           Simple subtitle support for YouTube and video content,
           including English or Bahasa Melayu subtitles, basic timing
@@ -759,9 +741,12 @@
         </p>
       </div>
 
+
       <div class="service">
         <div class="service-number">06</div>
+
         <h3>AI-Assisted Creative Design</h3>
+
         <p>
           Creative visuals developed with AI-assisted tools
           and refined using Photoshop.
@@ -792,6 +777,7 @@
         </div>
 
       </div>
+
 
       <div class="about-text">
 
@@ -849,12 +835,14 @@
         </div>
       </div>
 
+
       <div class="portfolio-item">
         <div>
           <h3>Creative Project 02</h3>
           <p>AI + Photoshop visual</p>
         </div>
       </div>
+
 
       <div class="portfolio-item">
         <div>
@@ -863,6 +851,7 @@
         </div>
       </div>
 
+
       <div class="portfolio-item">
         <div>
           <h3>Creative Project 04</h3>
@@ -870,12 +859,14 @@
         </div>
       </div>
 
+
       <div class="portfolio-item">
         <div>
           <h3>Creative Project 05</h3>
           <p>Creative image concept</p>
         </div>
       </div>
+
 
       <div class="portfolio-item">
         <div>
@@ -951,61 +942,132 @@
       and get back to you.
     </p>
 
-    <form class="quote-form" action="mailto:ccvisualworks@gmail.com" method="post" enctype="text/plain">
+    <form
+      class="quote-form"
+      action="mailto:ccvisualworks@gmail.com"
+      method="post"
+      enctype="text/plain"
+    >
 
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" name="Name" required>
+
+        <input
+          type="text"
+          id="name"
+          name="Name"
+          required
+        >
       </div>
+
 
       <div class="form-group">
         <label for="business">Business / Company</label>
-        <input type="text" id="business" name="Business">
+
+        <input
+          type="text"
+          id="business"
+          name="Business"
+        >
       </div>
+
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="Email" required>
+
+        <input
+          type="email"
+          id="email"
+          name="Email"
+          required
+        >
       </div>
 
-      <div class="form-group">
-        <label for="whatsapp">WhatsApp</label>
-        <input type="text" id="whatsapp" name="WhatsApp">
-      </div>
 
       <div class="form-group">
         <label for="service">Service Needed</label>
 
         <select id="service" name="Service">
-          <option value="">Please select</option>
-          <option>Video, Audio & Content Editing</option>
-          <option>Website Design</option>
-          <option>Visual Design</option>
-          <option>E-commerce Support</option>
-          <option>YouTube Subtitling</option>
-          <option>AI-Assisted Creative Design</option>
-          <option>Be a Partner</option>
-          <option>Other</option>
+
+          <option value="">
+            Please select
+          </option>
+
+          <option>
+            Video, Audio & Content Editing
+          </option>
+
+          <option>
+            Website Design
+          </option>
+
+          <option>
+            Visual Design
+          </option>
+
+          <option>
+            E-commerce Support
+          </option>
+
+          <option>
+            YouTube Subtitling
+          </option>
+
+          <option>
+            AI-Assisted Creative Design
+          </option>
+
+          <option>
+            Be a Partner
+          </option>
+
+          <option>
+            Other
+          </option>
+
         </select>
 
       </div>
+
 
       <div class="form-group">
-        <label for="budget">Estimated Budget</label>
+
+        <label for="budget">
+          Estimated Budget
+        </label>
 
         <select id="budget" name="Budget">
-          <option value="">Please select</option>
-          <option>RM300 – RM500</option>
-          <option>RM500 – RM1,000</option>
-          <option>RM1,000 – RM2,000</option>
-          <option>Not sure yet</option>
+
+          <option value="">
+            Please select
+          </option>
+
+          <option>
+            RM300 – RM500
+          </option>
+
+          <option>
+            RM500 – RM1,000
+          </option>
+
+          <option>
+            RM1,000 – RM2,000
+          </option>
+
+          <option>
+            Not sure yet
+          </option>
+
         </select>
 
       </div>
+
 
       <div class="form-group full">
 
-        <label for="message">Tell me about your project</label>
+        <label for="message">
+          Tell me about your project
+        </label>
 
         <textarea
           id="message"
@@ -1016,26 +1078,19 @@
 
       </div>
 
+
       <div class="form-group full">
 
-        <button type="submit" class="btn btn-primary">
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
           Submit Quote Request →
         </button>
 
       </div>
 
     </form>
-
-    <div class="quote-whatsapp">
-      Prefer WhatsApp?
-      <a
-        href="https://wa.me/60166013282?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
-        class="blue-text"
-        target="_blank"
-      >
-        Message me directly.
-      </a>
-    </div>
 
   </section>
 
@@ -1062,14 +1117,6 @@
     <div class="contact-buttons">
 
       <a
-        class="btn btn-primary"
-        href="https://wa.me/60166013282?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
-        target="_blank"
-      >
-        WhatsApp Me
-      </a>
-
-      <a
         class="email"
         href="mailto:ccvisualworks@gmail.com"
       >
@@ -1094,18 +1141,6 @@
     </div>
 
   </footer>
-
-
-  <!-- FLOATING WHATSAPP -->
-
-  <a
-    href="https://wa.me/60166013282?text=Hi%20CC%20Visual%20Works%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
-    class="whatsapp"
-    target="_blank"
-    aria-label="Chat with CC Visual Works on WhatsApp"
-  >
-    WhatsApp
-  </a>
 
 </body>
 </html>
