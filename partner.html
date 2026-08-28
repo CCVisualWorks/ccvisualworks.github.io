@@ -8,15 +8,28 @@
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #071812;
-      color: #E6ECE8;
+    html {
+      scroll-behavior: smooth;
     }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #071812;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
 
     nav {
       position: fixed;
@@ -53,54 +66,63 @@
       gap: 25px;
       align-items: center;
       list-style: none;
-      margin: 0;
-      padding: 0;
     }
 
     .nav-links a {
       font-size: 14px;
       color: #E6ECE8;
-      text-decoration: none;
+      transition: 0.3s;
     }
 
     .nav-links a:hover {
       color: #4A9BFF;
     }
 
-    .quote-nav {
-      padding: 10px 18px;
-      border: 1px solid #2F80FF;
-      border-radius: 4px;
-      color: #FFFFFF !important;
-    }
-
-    .quote-nav:hover {
-      background: #2F80FF;
-    }
+    /* PARTNER */
 
     .partner {
       min-height: 100vh;
-      padding: 140px 20px 80px;
+      padding: 160px 4.6% 110px;
       background: #071812;
+    }
+
+    .section-label {
+      color: #8FA59A;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(35px, 5vw, 65px);
+      line-height: 1;
+      margin-bottom: 60px;
+      letter-spacing: -2px;
+      color: #FFFFFF;
     }
 
     .partner-box {
       max-width: 850px;
-      margin: 0 auto;
       padding: 60px;
       border: 1px solid rgba(74,155,255,0.25);
-      background: #0B2118;
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(47,128,255,0.14),
+          transparent 35%
+        ),
+        #0B2118;
     }
 
-    .partner-box h1 {
-      font-size: 42px;
-      margin: 0 0 20px;
+    .partner-box h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
 
     .partner-box p {
       color: #C4D0CA;
       font-size: 17px;
-      line-height: 1.7;
       margin-bottom: 25px;
       max-width: 650px;
     }
@@ -114,10 +136,54 @@
     .partner-list li {
       margin-bottom: 8px;
     }
+
+    .btn {
+      padding: 18px 32px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid #2F80FF;
+      display: inline-block;
+      background: #2F80FF;
+      color: #FFFFFF;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #4A9BFF;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .partner {
+        padding: 130px 6% 80px;
+      }
+
+      .partner-box {
+        padding: 35px 25px;
+      }
+
+      .partner-box h3 {
+        font-size: 30px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -125,46 +191,58 @@
       <strong>CC</strong> <span>VISUAL WORKS</span>
     </div>
 
-<ul class="nav-links">
-  <li><a href="./">Home</a></li>
-  <li><a href="./#about">About</a></li>
-  <li><a href="./#services">Services</a></li>
-  <li><a href="./#portfolio">Portfolio</a></li>
-  <li><a href="partner.html">Partner</a></li>
-  <li><a href="./#contact">Contact</a></li>
-</ul>
+    <ul class="nav-links">
+      <li><a href="./">Home</a></li>
+      <li><a href="./#about">About</a></li>
+      <li><a href="./#services">Services</a></li>
+      <li><a href="./#portfolio">Portfolio</a></li>
+      <li><a href="partner.html">Partner</a></li>
+      <li><a href="./#contact">Contact</a></li>
+    </ul>
 
   </nav>
 
+
+  <!-- PARTNER -->
+
   <section class="partner">
+
+    <div class="section-label">
+      Collaboration
+    </div>
+
+    <h1 class="section-title">
+      Be a Partner
+    </h1>
 
     <div class="partner-box">
 
-      <h1>Let's Partner</h1>
+      <h3>Looking for a creative partner?</h3>
 
       <p>
-        Looking for a flexible creative partner to support your marketing,
-        content, and visual projects?
-      </p>
-
-      <p>
-        I work independently with AI-powered creative tools and professional
-        editing workflows to help businesses create better visual materials
-        and marketing assets.
+        Let's work together on a flexible, project-by-project basis.
+        Whether you need creative support for one project or ongoing help,
+        let's discuss what you need.
       </p>
 
       <ul class="partner-list">
-        <li>AI-assisted creative production</li>
-        <li>Marketing visuals and promotional content</li>
-        <li>E-commerce product presentation</li>
-        <li>Video and image editing</li>
-        <li>Flexible project-based support</li>
+        <li>Video, audio & content editing</li>
+        <li>Website projects</li>
+        <li>Visual design</li>
+        <li>E-commerce support</li>
+        <li>YouTube subtitling</li>
+        <li>AI-assisted creative work</li>
       </ul>
 
       <p>
-        Have a project or collaboration in mind? Let's discuss how we can
-        work together.
+        I work independently, using AI-assisted creative tools and
+        professional editing workflows to support practical marketing
+        and visual projects.
       </p>
+
+      <a href="./#contact" class="btn">
+        Let's Work Together →
+      </a>
 
     </div>
 
