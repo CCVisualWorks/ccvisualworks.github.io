@@ -1,208 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CC Visual — AI, creative and digital visual experiences.">
-<title>CC Visual — Creative Digital Studio</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-:root{
-  --bg:#03070d; --panel:#07111c; --text:#f4f8ff; --muted:#a7b3c3;
-  --blue:#4eb7ff; --line:rgba(150,190,230,.18);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,calc(100% - 48px));margin:auto}
-header{position:fixed;z-index:20;top:0;left:0;right:0;padding:22px 0;background:linear-gradient(180deg,rgba(2,7,13,.82),rgba(2,7,13,0));backdrop-filter:blur(5px)}
-.nav{display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:700;letter-spacing:.18em;font-size:18px}
-.logo span{font-weight:400}
-nav{display:flex;gap:30px;font-size:12px;color:#dce7f4}
-nav a{opacity:.82;transition:.25s}
-nav a:hover{opacity:1;color:var(--blue)}
-.nav-cta{border:1px solid rgba(255,255,255,.3);padding:10px 17px;border-radius:30px;font-size:11px}
-
-.hero{
-  min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(3,7,13,.93) 0%,rgba(3,7,13,.75) 28%,rgba(3,7,13,.12) 62%,rgba(3,7,13,.22) 100%),
-    url("assets/hero.png") right center/auto 100% no-repeat,
-    radial-gradient(circle at 70% 30%,#123b66 0,#06101c 48%,#03070d 100%);
-}
-.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
-.hero-content{position:relative;z-index:2;width:570px;padding-top:50px}
-.eyebrow{font-size:11px;letter-spacing:.28em;color:#dce8f5;margin-bottom:22px}
-h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.055em;font-weight:500}
-h1 strong{font-weight:700;background:linear-gradient(90deg,#fff,#77c7ff);-webkit-background-clip:text;color:transparent}
-.hero p{margin:25px 0 30px;max-width:520px;color:#c0ccda;line-height:1.75;font-size:15px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 22px;border-radius:30px;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,.3);transition:.3s}
-.btn.primary{background:#f4f8ff;color:#07101a}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(78,183,255,.18)}
-.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.3em;color:#aab7c7;z-index:3}
-
-section{padding:110px 0;border-top:1px solid var(--line)}
-.section-kicker{font-size:10px;letter-spacing:.25em;color:var(--blue);margin-bottom:14px}
-h2{font-size:clamp(34px,4vw,54px);letter-spacing:-.04em;font-weight:500}
-h2 span{color:var(--blue)}
-.section-intro{color:var(--muted);max-width:600px;line-height:1.7;margin-top:15px}
-
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
-.card{min-height:300px;border:1px solid var(--line);border-radius:18px;padding:25px;position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(16,34,53,.78),rgba(3,9,15,.9));transition:.35s}
-.card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(78,183,255,.13);filter:blur(35px);right:-70px;top:-70px}
-.card:hover{transform:translateY(-6px);border-color:rgba(78,183,255,.5)}
-.num{font-size:11px;color:#6f8195}
-.card h3{font-size:18px;margin-top:150px;margin-bottom:9px}
-.card p{font-size:12px;color:var(--muted);line-height:1.6}
-.arrow{position:absolute;bottom:24px;right:24px;color:var(--blue)}
-
-.about{background:radial-gradient(circle at 75% 50%,rgba(24,83,130,.18),transparent 35%)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.about-copy h2{max-width:560px}
-.about-copy p{margin:25px 0;color:var(--muted);line-height:1.8;max-width:560px}
-.signature{font-size:27px;font-style:italic;color:#76c8ff;margin:20px 0 28px}
-.features{display:grid;gap:16px}
-.feature{padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(8,18,29,.6)}
-.feature b{font-size:14px}.feature p{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.5}
-
-.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
-.work{height:180px;border-radius:15px;border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative;background:linear-gradient(135deg,#0d2943,#050a10)}
-.work:nth-child(2){background:linear-gradient(135deg,#142d4c,#07101b)}
-.work:nth-child(3){background:linear-gradient(135deg,#173c2d,#08100d)}
-.work:nth-child(4){background:linear-gradient(135deg,#30211a,#090b0f)}
-.work:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.8))}
-.work>*{position:relative;z-index:1}
-.work small{color:#74c6ff;font-size:9px;letter-spacing:.18em}
-.work h3{margin-top:7px;font-size:16px}
-
-.cta{padding:75px 0;background:
- radial-gradient(circle at 20% 50%,rgba(35,120,190,.22),transparent 30%),
- radial-gradient(circle at 80% 50%,rgba(220,90,80,.12),transparent 28%),
- #07111c}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.cta h2{font-size:42px}.cta p{color:var(--muted);margin-top:10px}
-
-footer{padding:35px 0;color:#7e8d9f;font-size:11px}
-.footer{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.footer nav{font-size:10px}
-.social{display:flex;gap:15px}
-
-@media(max-width:900px){
-  nav{display:none}.cards,.work-grid{grid-template-columns:repeat(2,1fr)}
-  .hero{background-position:68% center}
-  .hero-content{width:min(600px,100%);padding-top:90px}
-  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,7,13,.9),rgba(3,7,13,.55));z-index:1}
-  .about-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .container{width:min(100% - 32px,1180px)}
-  header{padding:17px 0}
-  .nav-cta{padding:8px 13px}
-  .hero{min-height:92vh;background-position:72% center}
-  .hero-content{padding-top:65px}
-  h1{font-size:46px}
-  .hero p{font-size:13px}
-  .cards,.work-grid{grid-template-columns:1fr}
-  .card{min-height:250px}.card h3{margin-top:115px}
-  section{padding:75px 0}
-  .cta-inner,.footer{flex-direction:column;align-items:flex-start}
-  .cta h2{font-size:34px}
-}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">CC <span>VISUAL</span></a>
-    <nav>
-      <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a>
-      <a href="#portfolio">PORTFOLIO</a><a href="#contact">CONTACT</a>
-    </nav>
-    <a class="nav-cta" href="mailto:hello@ccvisual.my">GET A QUOTE</a>
-  </div>
-</header>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home | ccVisualWorks</title><meta name="description" content="ccVisualWorks creative visual solutions">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="container nav">
+  <a class="logo" href="index.html">cc<span>Visual</span>Works</a>
+  <nav class="navlinks">
+    <a href="index.html">Home</a><a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a><a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="quote-btn" href="quote.html">Get a Quote</a>
+</div></header>
 
 <main>
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">AI • VISUAL • DIGITAL • CREATIVE</div>
-      <h1>I Turn Ideas Into <strong>Visual Experiences.</strong></h1>
-      <p>I create AI videos, digital experiences, e-commerce visuals and creative content that make brands stand out.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#portfolio">Explore Our Work →</a>
-        <a class="btn" href="#contact">Work With Us</a>
-      </div>
-    </div>
+<section class="hero"><div class="container hero-inner">
+  <div>
+    <div class="kicker">CREATIVE VISUAL SOLUTIONS</div>
+    <h1>Ideas in Motion,<br><span class="gradient-text">Visually Powerful.</span></h1>
+    <p class="lead">ccVisualWorks creates stunning visuals, videos, audio and digital solutions using creative tools and smart technology — helping your brand stand out and grow.</p>
+    <div class="hero-actions"><a class="primary-btn" href="portfolio.html">Explore My Work →</a></div>
   </div>
-  <div class="scroll">SCROLL DOWN ↓</div>
-</section>
+  <div class="hero-media">
+    <div class="hero-card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85" alt="Creative mountain landscape"><div class="play">▶</div></div>
+    <div class="hero-note">Create<br>Inspire<br>Grow</div>
+  </div>
+</div></section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-kicker">WHAT I DO</div>
-    <h2>Creative <span>Services</span></h2>
-    <p class="section-intro">From concept to final delivery, I bring my ideas to life with AI, creativity and modern digital tools.</p>
-    <div class="cards">
-      <article class="card"><span class="num">01</span><h3>E-Commerce</h3><p>Product visuals and content designed to make products stand out.</p><span class="arrow">↗</span></article>
-      <article class="card"><span class="num">02</span><h3>AI Video</h3><p>AI-powered stories, advertisements, avatars and cinematic short videos.</p><span class="arrow">↗</span></article>
-      <article class="card"><span class="num">03</span><h3>3D World</h3><p>Characters, environments, animation concepts and playful visual worlds.</p><span class="arrow">↗</span></article>
-      <article class="card"><span class="num">04</span><h3>Digital Design</h3><p>Websites, social content and digital visuals for modern brands.</p><span class="arrow">↗</span></article>
-    </div>
-  </div>
-</section>
+<section class="about"><div class="container about-grid">
+  <div class="about-image"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85" alt="Creative studio workspace"><div class="about-tag">Small<br>Studio<br>Big Ideas</div></div>
+  <div><div class="section-kicker">ABOUT CCVISUALWORKS</div><h2>Turning Ideas Into<br>Visual Experiences</h2>
+  <p class="copy">ccVisualWorks is a creative studio focused on video, audio, AI, design and website solutions. I help businesses and brands bring their ideas to life with powerful visuals, smart tools and a creative approach — not just content, but real results.</p>
+  <a class="outline-btn" href="about.html">Learn More →</a></div>
+</div></section>
 
-<section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-copy">
-      <div class="section-kicker">ABOUT CC VISUAL</div>
-      <h2>One Creative.<br>One Vision.<br><span>Limitless Possibilities.</span></h2>
-      <p>CC Visual Works is an independent creative studio combining AI, design, video and digital technology to create visual experiences for people and brands.</p>
-      <div class="signature">Not a big agency.<br>Just one.</div>
-      <a class="btn" href="mailto:hello@ccvisual.my">Let's Talk →</a>
-    </div>
-    <div class="features">
-      <div class="feature"><b>AI Technology</b><p>Smarter tools, bigger creative possibilities.</p></div>
-      <div class="feature"><b>Creative Design</b><p>Visuals that tell stories and build brands.</p></div>
-      <div class="feature"><b>Video Production</b><p>From concept to cinematic visuals.</p></div>
-      <div class="feature"><b>E-Commerce Visuals</b><p>Product content designed to sell.</p></div>
-    </div>
+<section class="services"><div class="container services-box">
+  <div><div class="section-kicker">MY SERVICES</div><h2>Creative Solutions<br>for Your Growth</h2>
+  <p class="copy">From eye-catching visuals to smart digital solutions, I provide flexible, high-quality services to help your brand look better, reach more people, and achieve results.</p>
+  <a class="primary-btn" href="services.html">View All Services →</a></div>
+  <div class="service-grid">
+    <div class="service-card"><div class="icon">▣</div><h3>Video Production</h3><p>Engaging videos for your brand, products and social media.</p></div>
+    <div class="service-card"><div class="icon">◒</div><h3>Audio Production</h3><p>Clear, professional audio for your content and ads.</p></div>
+    <div class="service-card"><div class="icon">✦</div><h3>AI Creative Solutions</h3><p>Smart tools. Bigger possibilities. Creative results.</p></div>
+    <div class="service-card"><div class="icon">✎</div><h3>Graphic Design</h3><p>Clean, modern and impactful designs for your brand.</p></div>
+    <div class="service-card"><div class="icon">◎</div><h3>Website Solutions</h3><p>Fast, responsive and business-ready websites.</p></div>
+    <div class="service-card"><div class="icon">↗</div><h3>Marketing Support</h3><p>Better presentation. More engagement. Growth.</p></div>
   </div>
-</section>
+</div></section>
 
-<section id="portfolio">
-  <div class="container">
-    <div class="section-kicker">FEATURED WORK</div>
-    <h2>Recent <span>Projects</span></h2>
-    <p class="section-intro">A glimpse of selected work across AI video, visual design, 3D worlds and digital experiences.</p>
-    <div class="work-grid">
-      <article class="work"><small>E-COMMERCE</small><h3>Product Visuals</h3></article>
-      <article class="work"><small>AI VIDEO</small><h3>Cinematic Stories</h3></article>
-      <article class="work"><small>3D ANIMATION</small><h3>3D Cartoon Worlds</h3></article>
-      <article class="work"><small>DIGITAL DESIGN</small><h3>Web Experiences</h3></article>
-    </div>
+<section class="dark-section"><div class="container">
+  <div class="portfolio-head"><div><div class="section-kicker" style="color:#9ec5ff">PORTFOLIO</div><h2>Recent Creative Works</h2><p class="copy">A selection of visual and digital projects created with passion and smart creative tools.</p></div>
+  <a class="outline-btn" style="color:#fff;border-color:#9ec5ff" href="portfolio.html">View Full Portfolio →</a></div>
+  <div class="portfolio-grid">
+    <div class="project"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=85" alt="Project 01"><h3>Creative Project 01</h3><p>AI-assisted visual concept</p></div>
+    <div class="project"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=85" alt="Project 02"><h3>Project 02</h3><p>AI + Photoshop visual</p></div>
+    <div class="project"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=85" alt="Project 03"><h3>Project 03</h3><p>Promotional visual</p></div>
+    <div class="project"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=85" alt="Project 04"><h3>Project 04</h3><p>Creative visual</p></div>
   </div>
-</section>
-
-<section class="cta" id="contact">
-  <div class="container cta-inner">
-    <div><h2>Ready to bring your ideas to life?</h2><p>Let's create something extraordinary.</p></div>
-    <a class="btn primary" href="mailto:hello@ccvisual.my">Get a Quote →</a>
-  </div>
-</section>
+</div></section>
 </main>
 
-<footer>
-  <div class="container footer">
-    <div class="logo">CC <span>VISUAL</span><br><small>AI • CREATIVE • DIGITAL</small></div>
-    <nav><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#portfolio">PORTFOLIO</a><a href="#contact">CONTACT</a></nav>
-    <div>© 2026 CC Visual Works. All rights reserved.</div>
-  </div>
-</footer>
-</body>
-</html>
+<footer><div class="container footer-grid">
+  <div><div class="footer-logo">ccVisualWorks</div><div class="small">Creative visual solutions for brands, businesses and digital projects.</div></div>
+  <div class="small">© 2026 ccVisualWorks. All rights reserved.</div>
+</div></footer>
+</body></html>
